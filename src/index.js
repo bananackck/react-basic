@@ -1,20 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';     //react-dom/client 에서 react-dom으로 내가 변경(버전 이슈?)
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import Library from './chapter_03/Library';
 import Clock from './chpater_04/Clock';
+import CommentList from './chpater_05/CommentList';
 
-setInterval(() => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <Clock />
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
-}, 1000);
+ReactDOM.render(
+  <React.StrictMode>
+    <CommentList />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 
 // If you want to start measuring performance in your app, pass a function
